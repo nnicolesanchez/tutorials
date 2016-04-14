@@ -1,0 +1,95 @@
+% Programming Stuff
+Download \textbf{Sublime Text} 
+https://www.sublimetext.com/3
+Once it is installed:
+First and foremost: Install: \textbf{Package Control}
+- Allows you to install/upgrade/remove/view all packages and plugins that you have installed (super easy to call up)
+- https://packagecontrol.io/installation
+- Restart \textbf{Sublime}
+Then using the Command Palette (shift+command+P)
+Just start typing \textbf{Package Control} and select the \textbf{Install Package} options
+Then start typing the following and select when the one you want appears
+— \textbf{Latex Tools}
+— \textbf{Latexing}
+— \textbf{Latex-cwl} (autocomplete latex commands)
+— \textbf{Git}
+— \textbf{Git Tools}
+— \textbf{Shell Exec} (executing shell commands)
+
+% To make Register your version of Sublime: 
+% 1. Go to http://appnee.com/sublime-text-3-universal-license-keys-collection-for-win-mac-linux/
+% 		- Copy a License (for recently downloaded Sublime, choose one "After 309")
+% 2. In Sublime:
+% 		- Help > Input License
+% 		- Paste into Input License Box
+% 		- Remove the last couple lines (after "Copyright")
+% 3. You're done! 
+
+% Next: Need to add Git HUb connection and making ssh keys instructions
+When you're connecting an already created Repository on GitHub to your computer, you need to create an SSH key
+One your computer:
+- In your: /Users/you/.ssh directory you want to create a public key in your id_rsa folders
+- You may already have one in id_rsa.pub
+- Copy this \textit{public key}
+On GitHub:
+Go to: Setting > SSH and GPG Keys
+- Copy+paste \textit{public key} that into a \textbf{new SSH key}
+Back to Computer:
+- Now you need to clone your new directory
+- In terminal: Go to your repositories directory and determine where you want to have your cloned directory
+- Then \$ git clone git@github.com:yourgithubscreenname/yourrepositoryname.git
+- You'll have a new file under your repositories name
+- Push/Commit/Pull/Enjoy!
+
+
+% Citation and Writing Stuff
+Download \textbf{Mendeley}:
+https://www.mendeley.com/download-mendeley-desktop/mac/instructions/
+Once it is installed: 
+In your \textbf{Documents} folder create a Mendeley directory
+Inside that \textbf{Mendeley directory} create three others:
+- bibtexfiles (where all your bibtext files will be created and saved)
+- tempfiles   (where you will save your papers straight off the web, NO NEED TO EDIT FILE NAMES even if files saves as ``pdf.pdf'')
+- files       (where your ``pdf.pdf'' awkwardly named files will be resaved with awesome, accurate names)
+
+Now open \textbf{Mendeley}:
+Go to \textit{Mendeley Desktop} > \textit{Preferences} 
+- Under \textbf{Document Details}:
+	Make sure ``Citation Key'' and ``DOI'' are selected
+- Under \textbf{File Organizer}:
+	Select \textbf{Organize My Files}
+		In the \textbf{Copy files to} area put in the path to your Mendeley/files directory
+		For example: /Users/the_neekster/Documents/MENDELEY/MEND_files
+	Select \textbf{Sort files into subfolders}
+		You can adjust this to your preferences
+		I use: Year, Title, and Journal
+		This creates a subdirectory in your /Mendeley/files directory
+		For example: ~/MENDELEY/MEND_files/Treister_et_al
+	Select \textbf{Rename document files}
+		Also adjust to your preference
+		This renames your files nicely
+- Under \textbf{Watched Folders}:
+	Find your Mendeley folder and select it (so that all three folders inside are also selected)
+- Under \textbf{BibTeX}:
+	Select \textbf{Enable BibTeX Syncing}
+	Select \textbf{Create one BibTeX file per group}
+		In the \textbf{Path} area put in the path to your Mendeley/bibtexfiles directory
+		For example: /Users/the_neekster/Documents/MENDELEY/MEND_bibtexfiles
+
+Yay! You're ready to get started!
+How to add a new paper citation:
+- Create a folder, say for a paper 
+	Everything you put in this folder will be in a single bibtex file
+	For example: \textit{Sanchez2016}
+- Open your paper on your favorite web browser and save to your /Mendeley/bibtexfile
+	DON'T WORRY ABOUT CHANGING THE NAME OF THE FILE
+- Open Mendeley and watch it upload 
+	** If this doesn't work try restarting Mendeley
+- Go to the \textbf{All Documents} or \textbf{Unsorted}
+	Add the new file to the \textit{Sanchez2016} folder you made 
+	It should immediately create or add the paper to the bibtexfile
+- Add your bibliography to the end of your LaTeX Document:
+	For example: \bibliography{/Users/nicolesanchez/Documents/MENDELEY/MEND_bibtexfiles/Sanchez2016.bib}
+	If you use this inconjunction with Sublime, it will automatically update and offer you paper suggestions from within that file! So handy! 
+You're done! Go add more papers!
+
